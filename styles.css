@@ -43,8 +43,8 @@
 }
 /* ============ */
 body{
-  background-color: var(--mainBlue);
   background:url(./assets/bcg-image.webp) repeat;
+  background-color:var(--sec-form-bcg)
 }
 /* styles for main wrapper */
 .wrapper{
