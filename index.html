@@ -4,174 +4,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=7">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <title>Payment form</title>
-  <!-- styles for responsive design -->
   <link href="styles.css" rel="stylesheet">
-  <!--end of styles for responsive design -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <!-- fonts -->
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
-        <!-- icons -->
+    <!-- font from google roboto -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <!-- ========== -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700;800&display=swap"
+      rel="stylesheet">
+    <!-- end of fonts -->
 </head>
 
 <body>
-  <!-- markup for wrapper -->
-  <!-- main container -->
-  <div class="main-container">
-    <!-- main container center -->
-    <div class="main-container-center">
-
-    <!-- heading -->
-    <h2 class="main-heading">ZuriTraining Payment Form</h2>
-    <!-- cards-and-form-container -->
-    <div class="cards-and-form-container">
-
-        <!-- image of cards container -->
-        <div class="card-image-container">
-          <div class="card">
-            <div class="chip-icon-container"></div>
-            <div class="card-number-container">
-            <span class="card-number"></span>
-            <span class="card-number"></span>
-            <span class="card-number"></span>
-            <span class="card-number"></span>
-          </div>
-          <div class="owner-name-name-dob-card-type-icon-container">
-            <h3 class="owner-name"></h3>
-            <div class="card-expiry-date-container-on-card">
-              <div class="card-expiry-date month"></div>
-              <span class="delimeter">/</span>
-              <div class="card-expiry-date year"></div>
-            </div>
-            <div class="card-icon-container">
-              <i class="fa fa-cc-visa"></i>
-            </div>
-          </div>
+  <!-- wrapper -->
+  <div class="wrapper">
+    <!-- form heading -->
+    <h2>ZuriTraining Payment Form</h2>
+    <!-- form container -->
+    <form>
+      <h4>Account</h4>
+      <!-- input group -->
+      <div class="input-group name-username-container">
+        <div class="input-box input-name-username-email-container">
+          <input type="text" placeholder="Full Name" required class="name">
+          <i class="fa fa-user icon fullname-icon"></i>
+        </div>
+        <div class="input-box input-name-username-email-container">
+          <input type="text" placeholder="username" required class="name">
+          <i class="fa fa-user icon username-icon"></i>
+        </div>
+      </div>
+      <!-- end of input group -->
+      <!-- input groupd -->
+      <div class="input-group email-container">
+        <div class="input-box input-name-username-email-container for-mail">
+          <input type="email" placeholder="email" required class="name">
+          <i class="fa fa-envelope icon email-icon"></i>
+        </div>
+      </div>
+<!-- end of input groupd -->
+<!-- input groupd -->
+      <div class="input-group dob-gender-input-container">
+        <!-- ========== -->
+        <div class="input-box dob-input-container">
+          <h4>Date of birth</h4>
+          <input type="text" placeholder="DD" class="dob">
+          <input type="text" placeholder="MM" class="dob">
+          <input type="text" placeholder="YYY" class="dob">
+        </div>
+        <!-- =========== -->
+        <div class="input-box gender-input-container">
+          <h4>Gender</h4>
+          <input type="radio" name="gender" checked id="b1" class="radio">
+          <label for="b1">Male</label>
+          <input type="radio" name="gender" class="radio" id="b2">
+          <label for="b2">Female</label>
+        </div>
+      </div>
+<!-- end of input groupd -->
+<!-- input group -->
+      <div class="input-group payment-details-container">
+        <div class="input-box heading-credit-paypal-container" >
+          <h4>Payment Details</h4>
+          <div class="card-type-container">
+            <!-- credit card -->
+            <label for="bc1">
+              <input type="radio" name="pay" id="bc1" checked class="radio">
+              <span>
+                <i class="fa fa-cc-visa icon"></i> Credit card
+              </span>
+            </label>
+            <!-- ============= -->
+            <!-- paypal -->
+            <label for="bc2">
+              <input type="radio" name="pay" id="bc2" class="radio">
+              <span>
+                <i class="fa fa-cc-paypal icon"></i> Paypal
+              </span>
+            </label>
+            <!-- ============= -->
           </div>
         </div>
-        <!-- end of image of cards container -->
-        <!-- form markup -->
-        <form class="form">
-          <h4 class="form-heading heading">Payment Details</h4>
-          <div class="payment-amount">
-            Amount <span class="amount">$ 200</span>
-          </div>
-          <div class="card-details">
-            Card Details
-          </div>
-    <!-- =============== -->
-            <div class="input-container">
-              <input id="fullname" type="text" required class="input-field">
-                <label for="fullname" class="email-label">
-                  <span class="content-name">Full name</span>
-                </label>
-              <i class="fa fa-user name-icon"></i>
-            </div>
-            <!-- ========== -->
-            <div class="input-container">
-              <input id="username" type="text" required class="input-field">
-                <label for="firstname" class="email-label">
-                  <span class="content-name">username</span>
-                </label>
-              <i class="fa fa-user username-icon"></i>
-            </div>
-
-    <!-- ========================== -->
-            <div class="input-container">
-              <input id="email" type="email" required class="input-field">
-              <label for="email" class="email-label">
-                <span class="content-name">Email address</span>
-              </label>
-              <i class="fa fa-envelope"></i>
-            </div>
-
-    <!-- ================== -->
-            <!-- input for date of birth -->
-            <div class="input-container">
-              <!-- <h4 class="dob-heading heading">Date of birth</h4>
-              <input type="date" placeholder="DD" class="dob input-field"> -->
-              <input type="text" placeholder="MM" class="dob">
-              <input type="text" placeholder="YYY" class="dob">
-            </div>
-            <!--input for gender  -->
-            <div class="input-box">
-              <h4 class="gender-heading heading">Gender</h4>
-              <!-- male -->
-              <input type="radio" name="gender" checked id="b1" class="radio">
-              <label for="b1">Male</label>
-
-              <!-- female -->
-              <input type="radio" name="gender" class="radio" id="b2">
-              <label for="b2">Female</label>
-            </div>
-    <!-- =========== -->
-    <!-- card type container -->
-          <div class="input-container">
-            <div class="input-box">
-              <h4 class="heading">Payment Details</h4>
-              <input type="radio" name="pay" id="bc1" checked class="radio">
-              <label for="bc1">
-                <span>
-                  <i class="fa fa-cc-visa"> Card</i>
-                </span>
-              </label>
-              <input type="radio" name="pay" id="bc2" class="radio">
-              <label for="bc2">
-                <span>
-                  <i class="fa fa-cc-paypal">Paypal </i>
-                </span>
-              </label>
-            </div>
-          </div>
-          <!-- end of card type container -->
-          <!--============ -->
-    <!-- card number container -->
-          <div class="card-number-container">
-            <div class="input-box">
-              <input type="tel" class="name" placeholder="card number" required>
-              <i class="fa fa-credit-card icon"></i>
-            </div>
-          </div>
-    <!-- end of card number container -->
-    <!-- ================= -->
-    <!-- cvc input container -->
-            <div class="cvc-input-container">
-              <input class="cvc-input" type="tel" required placeholder="Card CVC">
-              <i class="fa fa-user icon"></i>
-            </div>
-    <!-- end of cvc input container -->
-    <!-- =================== -->
-    <!-- expiry date input container -->
-            <div class="expiry-date-input-container">
-              <div class="h3">Expiry-date</div>
-              <select class="expiry-date-select">
-                <option>01 Dec</option>
-                <option>02 Dec</option>
-                <option>03 Dec</option>
-              </select>
-              <select>
-                <option>2020</option>
-                <option>2021</option>
-                <option>2022</option>
-              </select>
-            </div>
-    <!-- end of expiry date container -->
-          <!-- submit-btn -->
-            <div class="submit-btn-container">
-              <button class="submit-btn" type="submit">Pay Now</button>
-            </div>
-        </form>
       </div>
-      <!-- cards-and-form-container -->
-    </div>
-    <!--end of main container center -->
+<!-- end of input group -->
+<!-- card details container -->
+<!-- input group -->
+      <div class="input-group card-number-container">
+        <div class="input-box card-input-container">
+          <input type="tel" class="name" placeholder="card number" required>
+          <i class="fa fa-credit-card icon card-number-icon"></i>
+        </div>
+      </div>
+<!-- end of input group -->
+<!-- input group -->
+      <div class="input-group card-cvc-expiry-date-container">
+        <!-- ========= -->
+        <div class="input-box card-cvc-container">
+          <input type="tel" required placeholder="Card CVC">
+          <i class="fa fa-user icon cvc-icon"></i>
+        </div>
+        <!-- ======= -->
+        <div class="input-box card-expiry-date-container">
+          <select>
+            <option>01 Dec</option>
+            <option>02 Dec</option>
+            <option>03 Dec</option>
+          </select>
+          <select>
+            <option>2020</option>
+            <option>2021</option>
+            <option>2022</option>
+          </select>
+        </div>
+      </div>
+<!-- end of input group -->
+<!-- input group -->
+      <div class="input-group pay-now-btn-main-container">
+        <div class="input-box pay-now-btn-container">
+          <button type="submit" class="pay-btn">Pay Now</button>
+        </div>
+      </div>
+<!-- end of input group -->
+    </form>
+    <!-- end of form container -->
   </div>
-<!--end main container -->
+  <!-- end of wrapper -->
 </body>
-
 </html>
